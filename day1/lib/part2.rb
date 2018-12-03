@@ -1,7 +1,7 @@
 require 'set'
 
-def main(filename)
-  values = File.open(filename).each_line.map &:to_i
+def find_loop(lines)
+  values = lines.map &:to_i
 
   totals = Set.new
   running = 0
@@ -20,4 +20,6 @@ def main(filename)
   running
 end
 
-puts main('input')
+def main(filename)
+  find_loop(File.open(filename).each_line)
+end
