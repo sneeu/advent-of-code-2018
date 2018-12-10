@@ -1,7 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    byebug (10.0.2)
     minitest (5.11.3)
+    minitest-byebug (0.0.3)
+      byebug
+      minitest (~> 5.0)
     rake (12.3.1)
 
 PLATFORMS
@@ -9,6 +13,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest
+  minitest-byebug
   rake
 
 BUNDLED WITH
