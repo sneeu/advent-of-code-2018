@@ -32,7 +32,7 @@ class PartOne < Minitest::Test
     l.add_event(Event.new(10, Time.new(1518, 11, 2, 0, 30), Time.new(1518, 11, 2, 0, 45)))
 
     assert_equal 10, l.peak_sleeper
-    assert_equal 30, l.peak_minute_for_sleeper(10)
+    assert_equal [30, 2], l.peak_minute_for_sleeper(10)
     assert_equal 300, l.peak_sleep
   end
 end

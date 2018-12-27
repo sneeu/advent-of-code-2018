@@ -1,6 +1,6 @@
 require_relative './common'
 
-def peak_sleep(lines)
+def peak_minute(lines)
   log_parser = LogParser.new
   log = Log.new
 
@@ -8,10 +8,9 @@ def peak_sleep(lines)
        .compact
        .each { |event| log.add_event(event) }
 
-  log.peak_sleep
+  log.peak_minute
 end
 
 def main(filename)
-  peak_sleep(File.open(filename).readlines.sort)
+  peak_minute(File.open(filename).readlines.sort)
 end
-
